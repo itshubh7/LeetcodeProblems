@@ -1,8 +1,8 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int i,k=0;
-        for(i=0; i<nums.size(); i++)
+        int k=0;
+        for(int i=0; i<nums.size(); i++)
         {
             if(nums[i]!=0)
             {
@@ -10,7 +10,7 @@ public:
                 k++;
             }
         }
-        for(i=k; i<nums.size(); i++)
+        for(int i=k; i<nums.size(); i++)
         {
             nums[i]=0;
         }
