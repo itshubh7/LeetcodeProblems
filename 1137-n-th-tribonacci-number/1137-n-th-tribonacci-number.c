@@ -1,8 +1,7 @@
 int tribonacci(int n){
     if(n<2)
         return n;
-    else
-    {
+    
         int dp[3]={0,1,1};
         for(int i=3; i<=n; i++)
         {
@@ -12,5 +11,5 @@ int tribonacci(int n){
             dp[2]=next;
         }
         return dp[2];
-    }
+    
 }
