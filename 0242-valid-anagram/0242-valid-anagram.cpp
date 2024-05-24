@@ -1,9 +1,7 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        long int m = s.length();
-        long int n = t.length();
-        if(n!=m)
+        if(s.length()!=t.length())
             return false;
         else
         {
