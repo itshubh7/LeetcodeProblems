@@ -4,8 +4,8 @@ public:
         vector<int> result;
         for(int i=0; i<nums1.size(); i++)
                 result.push_back(nums1[i]);
-        for(int j=0; j<nums2.size(); j++)
-                result.push_back(nums2[j]);
+        for(int i=0; i<nums2.size(); i++)
+                result.push_back(nums2[i]);
         sort(result.begin(), result.end());
         int size=result.size();
         double val;
