@@ -1,35 +1,20 @@
 class Solution {
 public:
     int reverse(int x) {
-        
-        if(x>=0)
+        int val=x;
+        if(x<0)
+            val=abs(x);
+        long rem,rev=0;
+        while(val>0)
         {
-            long rem, rev=0;
-            while(x>0)
-            {
-                
-                rem = x%10;
-                rev = rev*10 + rem;
-                x=x/10;
-            }
-            if(rev>INT_MAX || rev<INT_MIN) return 0;
-            return rev;
+            rem=val%10;
+            rev=rev*10+rem;
+            val/=10;
         }
-        else
-        {
-            x = abs(x);
-            long rem, rev=0;
-            while(x>0)
-            {
-                
-                rem = x%10;
-                rev = rev*10 + rem;
-                x=x/10;
-            }
-            if(rev>INT_MAX || rev<INT_MIN) return 0;
-            rev = 0-rev;
-            return rev;
-        }
-        
+        if(x<0)
+            rev=0-rev;
+        if(rev<INT_MIN || rev>INT_MAX)
+            return 0;
+        return rev;
     }
 };
