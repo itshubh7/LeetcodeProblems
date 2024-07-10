@@ -1,7 +1,7 @@
 class Solution {
 public:
     int sumOfTheDigitsOfHarshadNumber(int x) {
-        int ret=-1;
+    
         int y=x;
         int sum=0;
         while(x!=0)
@@ -10,7 +10,7 @@ public:
             x/=10;
         }
         if(y%sum==0)
-            ret=sum;
-        return ret;
+           return sum;
+        return -1;
     }
 };
