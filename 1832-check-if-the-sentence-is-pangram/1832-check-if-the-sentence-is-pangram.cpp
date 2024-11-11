@@ -9,7 +9,7 @@ public:
             bool avail[26]={0};
             for(int i=0; i<n; i++)
             {
-                int pos=sentence.at(i) - 'a';
+                int pos=sentence.at(i) - 'a'; 
                 avail[pos]=1;
             }
             for(int i=0; i<26; i++)
